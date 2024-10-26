@@ -1,0 +1,24 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle, 
+        xlabel={$t$}, 
+        ylabel={$x$},
+        xmin=0, xmax=4, ymin=0, ymax=2,
+        xtick=\empty, ytick=\empty,
+        domain=0:4,
+        samples=100,
+        width=6cm,
+        height=4cm,
+    ]
+    % Function: y = x(2 - x)
+    \addplot[smooth, thick] {x * (2 - x)};
+    
+    % Calculate the maximum y-coordinate
+    \pgfmathsetmacro{\maxY}{1}  % Maximum occurs at x=1
+    \pgfmathsetmacro{\offset}{0.05}  % Small offset to position dashed line above the maxY
+    
+    % Horizontal dashed line just above the maximum point
+    \addplot[dashed, thick] coordinates {(0, \maxY + \offset) (4, \maxY + \offset)}; 
+
+    \end{axis}
+\end{tikzpicture}

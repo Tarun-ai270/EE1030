@@ -1,0 +1,17 @@
+\begin{tikzpicture}
+    \begin{axis}[
+        axis lines=middle, 
+        xlabel={$t$}, 
+        ylabel={$x$},
+        xmin=-3, xmax=3, ymin=0, ymax=5,
+        xtick=\empty, ytick=\empty,
+        domain=-2:2, 
+        samples=100,
+        width=6cm,
+        height=4cm
+    ]
+    \addplot[smooth, thick] {x^2}; 
+    \addplot[dashed, thick] coordinates {(-2,0) (-2,3.7)};
+    \addplot[dashed, thick] coordinates {(2,0) (2,3.7)};
+    \end{axis}
+\end{tikzpicture}
