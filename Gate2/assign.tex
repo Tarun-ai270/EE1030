@@ -1,0 +1,227 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+\usepackage{enumitem}
+\usepackage{xcolor}
+%\usepackage{multicol}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\title{2011-MA-27-39}
+\author{AI24BTECH11023 - Tarun Reddy Pakala}
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[start=27]
+\item Let $T:\mathbb{C}^3 \to \mathbb{C}^3$ be defined by $T\begin{pmatrix}
+z_1 \\
+z_2 \\
+z_3
+\end{pmatrix}=\begin{pmatrix}
+z_1-iz_2 \\
+iz_1+z_2 \\
+z_1+z_2+iz_3
+\end{pmatrix}$. Then, the adjoint $T^*$ of $T$ is given by $T^*\begin{pmatrix}
+z_1 \\
+z_2 \\
+z_3
+\end{pmatrix}=$
+\begin{enumerate}
+ \item $  \begin{pmatrix}
+z_1+iz_2 \\
+-iz_1+z_2 \\
+z_1+z_2-iz_3
+\end{pmatrix}$
+    \item $\begin{pmatrix}
+z_1-iz_2+z_3 \\
+-iz_1+z_2+z_3 \\
+iz_3
+\end{pmatrix}$
+    \item $\begin{pmatrix}
+z_1-iz_2+z_3 \\
+iz_1+z_2+z_3 \\
+-iz_3
+\end{pmatrix}$
+    \item $\begin{pmatrix}
+iz_1+z_2 \\
+z_1-iz_2 \\
+z_1-z_2-iz_3
+\end{pmatrix}$
+\end{enumerate}
+\item Let $f(z)$ be an entire function that $\abs{f(z)}\leq K\abs{z}, \forall z \in \mathbb{C}$, for some $K>0$. If $f(1)=i$, the value of $f(i)$ is
+\begin{enumerate}
+    \item 1
+    \item -1
+    \item $i$
+    \item $-i$
+\end{enumerate}
+\item Let $y$ be the solution of the initial value problem $$\frac{d^2y}{dx^2}+y=6\cos{2x}, \; y(0)=3, \; y'(0)=1.$$ Let the Laplace transform of $y$ be $F(s)$. Then, the value of $F(1)$ is
+\begin{enumerate}
+    \item $\frac{17}{5}$
+    \item $\frac{13}{5}$
+    \item $\frac{11}{5}$
+    \item $\frac{9}{5}$
+\end{enumerate}
+\item For $0\leq x\leq 1,$ let $$f_n(x) = 
+\begin{cases} 
+\frac{n}{1+n}, & \text{if } x \text{ is irrational} \\
+0, & \text{if } x \text{ is rational}
+\end{cases}$$ and $f(x)=\lim_{n \to \infty}f_n(x).$ Then, on the interval [0,1]
+\begin{enumerate}
+    \item $f$ is measurable and Riemann integrable
+    \item $f$ is measurable and Lebesgue integrable
+    \item $f$ is not measurable
+    \item $f$ is not Lebesgue integrable
+\end{enumerate}
+\item If $x, y$ and $z$ are positive real numbers, then the minimum value of $$x^2+8y^2+27z^2 \; \text{where} \; \frac{1}{x}+\frac{1}{y}+\frac{1}{z}=1$$ is
+\begin{enumerate}
+    \item 108
+    \item 216
+    \item 405
+    \item 1048
+\end{enumerate}
+\item Let $T:\mathbb{R}^4 \to \mathbb{R}^4$ be defined by $$T(x,y,z,w)=(x+y+5w,x+2y+w,-z+2w,5x+y+2z).$$ The dimension of the eigenspace of $T$ is
+\begin{enumerate}
+    \item 1
+    \item 2
+    \item 3
+    \item 4
+\end{enumerate}
+\item Let $y$ be a polynomial solution of the differential equation $$(1-x^2)y''-2xy'+6y=0.$$ If $y(1)=2$, then the value of the integral $\int_{-1}^{1}y^2dx$ is
+\begin{enumerate}
+    \item $\frac{1}{5}$
+    \item $\frac{2}{5}$
+    \item $\frac{4}{5}$
+    \item $\frac{8}{5}$
+\end{enumerate}
+\item The value of the integral $$I=\int_{-1}^{1}exp(x^2)dx$$ using a rectangular rule is approximated as 2. Then, the approximation error $\abs{I-2}$ lies in the interval
+\begin{enumerate}
+    \item $(2e,3e]$
+    \item $(\frac{2}{3},2e]$
+    \item $(\frac{e}{8},\frac{2}{3}]$
+    \item $(0,\frac{e}{8}]$
+\end{enumerate}
+\item The integral surface for the Cauchy problem $$\frac{\partial z}{\partial x}+\frac{\partial z}{\partial y}=1,$$ which passes through the circle $z=0,$ $x^2+y^2=1$ is
+\begin{enumerate}
+    \item $x^2+y^2+2z^2+2zx-2yz-1=0$
+    \item $x^2+y^2+2z^2+2zx+2yz-1=0$
+    \item $x^2+y^2+2z^2-2zx-2yz-1=0$
+    \item $x^2+y^2+2z^2+2zx+2yz+1=0$
+\end{enumerate}
+\item The vertical displacement $u(x,t)$ of an infinitely long elastic string is governed by the initial value problem $$\frac{\partial^2 u}{\partial t^2}=4\frac{\partial^2 u}{\partial x^2}, \; -\infty <x<\infty, \; t>0,$$ $$u(x,0)=-x \; \text{and} \; \frac{\partial{u}}{\partial{t}}(x,0)=0.$$ The value of $u(x,t)$ at $x=2$ and $t=2$ is equal to
+\begin{enumerate}
+    \item 2
+    \item 4
+    \item -2
+    \item -4
+\end{enumerate}
+\item We have to assign four jobs \text{I, II, III, IV} to four workers $A, B, C \; \text{and} \; D$. The time taken by different workers (in hours) in completing different jobs is given below: 
+\begin{table}[h!]
+\centering
+\begin{tabular}{c c cccc}
+         &         & \uppercase\expandafter{\romannumeral 1} & \uppercase\expandafter{\romannumeral 2} & \uppercase\expandafter{\romannumeral 3} & \uppercase\expandafter{\romannumeral 4} \\
+         & A & 5 & 3 & 2 & 8 \\
+\multirow{2}{*}{Workers} & B & 7 & 9 & 2 & 6 \\
+                         & C & 6 & 4 & 5 & 7 \\
+                         & D & 5 & 7 & 7 & 8 \\
+\end{tabular}
+\end{table}
+
+The optimal assignment is as follows:\\
+    Job \text{III} to worker $A$; Job \text{IV} to worker $B$; Job \text{II} to worker $C$ and Job \text{I} to worker $D$ and hence the time taken by different workers in completing different jobs is now changed as:
+    \begin{table}[h!]
+\centering
+\begin{tabular}{c c cccc}
+         &         & \uppercase\expandafter{\romannumeral 1} & \uppercase\expandafter{\romannumeral 2} & \uppercase\expandafter{\romannumeral 3} & \uppercase\expandafter{\romannumeral 4} \\
+         & A & 5 & 3 & 2 & 5 \\
+\multirow{2}{*}{Workers} & B & 7 & 9 & 2 & 3 \\
+                         & C & 4 & 2 & 3 & 2 \\
+                         & D & 5 & 7 & 7 & 5 \\
+\end{tabular}
+\end{table}
+
+Then the minimum time (in hours) taken by the workers to complete all the jobs is
+\begin{enumerate}
+    \item 10
+    \item 12
+    \item 15
+    \item 17
+\end{enumerate}
+\item The following table shows the information on the availability of supply to each warehouse, the requirement of each market and unit transportation cost (in rupees) from each warehouse to each market.
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{c ccccc c}
+        & \multicolumn{5}{c}{Market} & \\
+        & & $M_1$ & $M_2$ & $M_3$ & $M_4$ & Supply \\
+        & $W_1$ & 6 & 3 & 5 & 4 & 22 \\
+        Warehouse & $W_2$ & 5 & 9 & 2 & 7 & 15 \\
+        & $W_3$ & 5 & 7 & 8 & 6 & 8 \\
+        & Requirement & 7 & 12 & 17 & 9 & \\ % Aligning Requirement with the values
+    \end{tabular}
+\end{table}
+
+The present transportation schedule is as follows: \\
+$W_1$ to $M_2$: 12 units; $W_1$ to $M_3$: 1 unit; $W_1$to $M_4$: 9 units; $W_2$ to $M_3$: 15 units; $W_3$ to $M_1$: 7 units and $W_3$ to $M_3$: 1 unit. Then the minimum total transportation cost ( in rupees) is 
+\begin{enumerate}
+    \item 150
+    \item 149
+    \item 148
+    \item 147
+\end{enumerate}
+\item If $\mathbb{Z}[i]$ is the ring of Gaussian integers, the quotient $\mathbb{Z}[i]/(3-i)$ is isomorphic to
+\begin{enumerate}
+    \item $\mathbb{Z}$
+    \item $\mathbb{Z}/3\mathbb{Z}$
+    \item $\mathbb{Z}/4\mathbb{Z}$
+    \item $\mathbb{Z}/10\mathbb{Z}$
+\end{enumerate}
+\end{enumerate}
+\end{document}
