@@ -1,0 +1,24 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{3cm}{3cm}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (4.5,12.5) to[short] (7.5,12.5);
+\draw (4.5,12.5) to[R] (4.5,8.75);
+\draw (4.5,8.75) to[short] (6.25,8.75);
+\draw (7,8.75) to[Tnpn, transistors/scale=1.19] (9,8.75);
+\draw (6.25,8.75) to[short] (7.25,8.75);
+\draw (8,9.75) to[R] (8,12.5);
+\draw (7.5,12.5) to[short] (8,12.5);
+\draw (7.5,8.75) to[R] (7.5,6.75);
+\draw (7.5,7) to (7.5,6.75) node[ground]{};
+\draw (6.25,12.5) to[short, -o] (6.25,13.25) ;
+\node [font=\small] at (8.75,11.25) {\textbf{900 $\Omega$}};
+\node [font=\small] at (5.75,13) {\textbf{+15 V}};
+\node [font=\small] at (3.75,10.5) {\textbf{100 k$\Omega$}};
+\node [font=\small] at (8,7.75) {\textbf{100 $\Omega$}};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}

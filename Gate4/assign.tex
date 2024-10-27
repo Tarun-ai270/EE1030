@@ -1,0 +1,191 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{circuitikz}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+\usepackage{enumitem}
+\usepackage{xcolor}
+%\usepackage{multicol}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\title{2012-PH-27-39}
+\author{AI24BTECH11023 - Tarun Reddy Pakala}
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[start=27]
+\item Inverse susceptibility $\brak{\frac{1}{\chi}}$ as a function of temperature, $T$ for material undergoing paramagnetic to ferromagnetic transition is given in the figure, where $O$ is the origin. The values of the Curie constant, $C$, and the Weiss molecular field constant, $\lambda$, in CGS units, are
+%figure 1
+	\input{fig1.tex}
+
+\begin{enumerate}
+    \item $C=5\times 10^{-5}, \; \lambda=3\times 10^{-2}$
+    \item $C=3\times 10^{-2}, \; \lambda=5\times 10^{-5}$
+    \item $C=3\times 10^{-2}, \; \lambda=2\times 10^{4}$
+    \item $C=2\times 10^{4}, \; \lambda=3\times 10^{-2}$
+\end{enumerate}
+\item A plane polarized electromagnetic wave in free space at time $t=0$ is given by $\overrightarrow{E}\brak{x, z}=10j\exp{\sbrak{i\brak{6x+8z}}}$. The magnetic field $\overrightarrow{B}\brak{x, z, t}$ is given by
+\begin{enumerate}
+    \item $\overrightarrow{B}\brak{x, z, t}=\frac{1}{c}\brak{6k-8\hat{i}}\exp{\sbrak{i\brak{6x+8z-10ct}}}$
+    \item $\overrightarrow{B}\brak{x, z, t}=\frac{1}{c}\brak{6k+8\hat{i}}\exp{\sbrak{i\brak{6x+8z-10ct}}}$
+    \item $\overrightarrow{B}\brak{x, z, t}=\frac{1}{c}\brak{6k-8\hat{i}}\exp{\sbrak{i\brak{6x+8z-ct}}}$
+    \item $\overrightarrow{B}\brak{x, z, t}=\frac{1}{c}\brak{6k+8\hat{i}}\exp{\sbrak{i\brak{6x+8z+ct}}}$
+\end{enumerate}
+\item The eigenvalues of the matrix $\begin{bmatrix}
+0 & 1 & 0 \\
+1 & 0 & 1 \\
+0 & 1 & 0 \\
+\end{bmatrix}$ are
+\begin{enumerate}
+    \item $0, 1, 1$
+    \item $0$, -$\sqrt{2}$, $\sqrt{2}$
+    \item $\frac{1}{\sqrt{2}}$, $\frac{1}{\sqrt{2}}$, $0$
+    \item $\sqrt{2}$, $\sqrt{2}$, $0$
+\end{enumerate}
+\item Match the typical spectroscopic regions specified in \textbf{Group I} with the corresponding type of transitions in \textbf{Group II.} \\
+\begin{tabular}{ll}
+    \textbf{Group I} & \textbf{Group II} \\
+    \brak{P} Infra-red region          & \brak{i} electronic transitions involving valence electrons         \\
+    \brak{Q} Ultraviolet-visible region         & \brak{ii} nuclear transitions        \\
+    \brak{R} X-ray region        & \brak{iii} vibrational transitions of molecules    \\
+    \brak{S} $\gamma$-ray region         & \brak{iv} transitions involving inner shell electrons        \\
+\end{tabular}
+
+\begin{enumerate}
+    \item \brak{P,i}; \brak{Q,iii}; \brak{R, ii}; \brak{S, iv}
+    \item \brak{P,ii}; \brak{Q,iv}; \brak{R, i}; \brak{S, iii}
+    \item \brak{P,iii}; \brak{Q,i}; \brak{R, iv}; \brak{S, ii}
+    \item \brak{P,iv}; \brak{Q,i}; \brak{R, ii}; \brak{S, iii}
+\end{enumerate}
+\item In the following circuit, for the output voltage to be $V_o=\brak{-V_1+\frac{V_2}{2}}$, the ratio $\frac{R_1}{R_2}$ is
+% figure 2
+	\input{fig2.tex}
+\begin{enumerate}
+    \item $\frac{1}{2}$
+    \item $1$
+    \item $2$
+    \item $3$
+\end{enumerate}
+\item The terms $\{\text{j}_1, \text{j}_2\}_J$ arising from $2\text{s}^13\text{d}^1$ electronic configuration in j-j coupling scheme are 
+\begin{enumerate}
+    \item $\{\frac{1}{2}, \frac{3}{2}\}_{2,1} \text{and} \{\frac{1}{2}, \frac{5}{2}\}_{3,2}$
+    \item $\{\frac{1}{2}, \frac{1}{2}\}_{1,0} \text{and} \{\frac{1}{2}, \frac{3}{2}\}_{2,1}$
+    \item $\{\frac{1}{2}, \frac{1}{2}\}_{1,0} \text{and} \{\frac{1}{2}, \frac{5}{2}\}_{3,2}$
+    \item $\{\frac{3}{2}, \frac{1}{2}\}_{2,1} \text{and} \{\frac{1}{2}, \frac{5}{2}\}_{3,2}$
+\end{enumerate}
+\item In the following circuit, the voltage drop across the ideal diode in forward bias condition is $0.7V$.\\
+%figure 3
+	\input{fig3.tex}
+	The current passing through the diode is 
+
+\begin{enumerate}
+    \item $0.5$ mA
+    \item $1.0$ mA
+    \item $1.5$ mA
+    \item $2.0$ mA
+\end{enumerate}
+\item Choose the CORRECT statement from the following.
+\begin{enumerate}
+    \item Neutron interacts through electromagnetic interaction
+    \item Electron does not interact through weak interaction
+    \item Neutrino interacts through weak and electromagnetic interaction
+    \item Quark interacts through strong interaction but not through weak interaction
+\end{enumerate}
+\item A rod of proper length $l_o$ oriented parallel to the $x$-axis moves with speed $\frac{2c}{3}$ along the $x$-axis in the $S$-frame, where $c$ is the speed of the light in free space. The observer is also moving along the $x$-axis with speed $\frac{c}{2}$ with respect to the $S$-frame. The length of the rod as measured by the observer is
+\begin{enumerate}
+    \item $0.35l_o$
+    \item $0.48l_o$
+    \item $0.87l_o$
+    \item $0.97l_o$
+\end{enumerate}
+\item A simple cubic crystal with lattice parameter $a_c$ undergoes transition into a tetragonal structure with lattice parameters $a_t=b_t=\sqrt{2}a_c$ and $c_t=2a_c$, below a certain temperature. The ratio of the interplanar spacings of $\brak{1 \; 0 \; 1}$ planes for the cubic and the tetragonal structure is
+\begin{enumerate}
+    \item $\sqrt{\frac{1}{6}}$
+    \item $\frac{1}{6}$
+    \item $\sqrt{\frac{3}{8}}$
+    \item $\frac{3}{8}$
+\end{enumerate}
+\item Consider the following circuit in which the current gain $\beta_{dc}$ of the transistor is 100.
+%figure 4
+	\input{fig4.tex}
+	Which one of the following correctly represents the load line (collector current $I_C$ with respect to collector-emitter voltage $V_{CE}$) and $Q$-point of this circuit?
+\begin{enumerate}
+    \item
+    %figure 5
+	    \input{fig5.tex}
+    \item 
+    %figure 6
+	    \input{fig6.tex}
+    \item 
+    %figure 7
+	    \input{fig7.tex}
+    \item 
+    %figure 8
+	    \input{fig8.tex}
+   \end{enumerate}
+\item Consider a system whose three energy levels are given by 0, $\epsilon$ and $2\epsilon$. The energy level $\epsilon$ is two-fold degenerate and the other two are non-degenerate. The partition function of the system with $\beta=\frac{1}{k_BT}$
+\begin{enumerate}
+    \item $1+2e^{-\beta \epsilon}$
+    \item $2e^{-\beta \epsilon}+e^{-2\beta \epsilon}$
+    \item $\brak{1+e^{-\beta \epsilon}}^2$
+    \item $1+e^{-\beta \epsilon}+e^{-2\beta \epsilon}$
+\end{enumerate}
+\item Two infinitely extended homogeneous isotropic dielectric media (medium-1 and medium-2 with dielectric constants $\frac{\epsilon_1}{\epsilon_2}=2$ and $\frac{\epsilon_2}{\epsilon_0}=5$, respectively) meet at the $z=0$ plane as shown in the figure . A uniform electric field exists everywhere. For $z \geq 0$, the electric field is given by $\overrightarrow{E_1}=2\hat{1}-3j+5k$. The interface separating the two media is charge free.\\ The electric displacement vector in the medium-2 is given by 
+	\input{fig9.tex}
+	\begin{enumerate}
+    \item $\overrightarrow{D_2}=\epsilon_0\sbrak{10\hat{i}+15j+10k}$
+    \item $\overrightarrow{D_2}=\epsilon_0\sbrak{10\hat{i}-15j+10k}$
+    \item $\overrightarrow{D_2}=\epsilon_0\sbrak{4\hat{i}-6j+10k}$
+    \item $\overrightarrow{D_2}=\epsilon_0\sbrak{4\hat{i}+6j+10k}$
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

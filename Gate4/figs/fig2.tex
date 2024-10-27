@@ -1,0 +1,35 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{3cm}{3cm}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (8.5,10.25) node[op amp,scale=1] (opamp2) {};
+\draw (opamp2.+) to[short] (7,9.75);
+\draw  (opamp2.-) to[short] (7,10.75);
+\draw (9.7,10.25) to[short](10,10.25);
+\draw (10,10.25) to[short, -o] (10.25,10.25) ;
+\draw (8.25,10.75) to[short, -o] (8.25,11.5) ;
+\draw (8.25,9.75) to[short, -o] (8.25,9) ;
+\draw (7,10.75) to[R] (5,10.75);
+\draw (7,9.75) to[R] (5,9.75);
+\draw (7.25,9.75) to[R] (7.25,7.75);
+\draw (7,10.75) to[short] (7,12.75);
+\draw (9.75,10.25) to[short] (9.75,12.75);
+\draw (7,12.75) to[R] (9.75,12.75);
+\draw (5,10.75) to[short, -o] (4.75,10.75) ;
+\draw (5,9.75) to[short, -o] (4.75,9.75) ;
+\draw (7.25,7.75) to (7.25,7.5) node[cground]{};
+\node [font=\small] at (8.25,13.25) {\textbf{R}};
+\node [font=\small] at (6,11.25) {\textbf{R}};
+\node [font=\small] at (4.5,9.75) {\textbf{$V_2$}};
+\node [font=\small] at (6.75,8.75) {\textbf{$R_2$}};
+\node [font=\small] at (6,9.25) {\textbf{$R_1$}};
+\node [font=\small] at (7.75,11.5) {\textbf{$+V_{CC}$}};
+\node [font=\small] at (7.75,9) {\textbf{$-V_{CC}$}};
+\node [font=\small] at (9.75,10) {\textbf{$V_{0}$}};
+\node [font=\small] at (4.5,10.75) {\textbf{$V_1$}};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
