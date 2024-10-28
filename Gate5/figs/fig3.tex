@@ -1,0 +1,26 @@
+\begin{center}
+\begin{tikzpicture}[>=latex]
+    % Ground support (fixed end)
+    \draw[pattern=north east lines] (-0.2,-0.5) rectangle (0,1);
+    \draw (-0.5,0) -- (-0.2,0);
+    
+    % Main beam (solid line)
+    \draw[thick] (0,0) -- (3,0);
+    
+    % Deflected beam (dashed line)
+    \draw[dashed] (0,0) -- (1,-0.05) -- (3,-0.4);
+    
+    % Vertical dimensions and arrows
+    \draw[<->] (1,0.3) -- (1,0.5) node[midway,right] {2 mm};
+    
+    % Force arrow and label
+    \draw[thick,->] (3,0.5) -- (3,0) node[above] {20 kN};
+    
+    % Horizontal dimensions
+    \draw[<->] (0,-0.8) -- (1,-0.8) node[midway,below] {1 m};
+    \draw[<->] (1,-0.8) -- (3,-0.8) node[midway,below] {2 m};
+    
+    % Vertical marker at deflection point
+    \draw[->] (1,-0.05) -- (1,0);
+\end{tikzpicture}
+\end{center}

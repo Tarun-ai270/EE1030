@@ -1,0 +1,53 @@
+\begin{tikzpicture}[scale=0.8]
+    % Left beam section
+    \draw (0,2) -- (0,-2);
+    \draw (1,2) -- (1,-2);
+    % Top and bottom closures for I-beam
+    \draw (0,2) -- (1,2);
+    \draw (0,-2) -- (1,-2);
+    % Center dashed line for left beam
+    \draw[dash pattern=on 2pt off 2pt] (0.5,2.5) -- (0.5,-2.5);
+    
+    % Connection plate
+    \draw (1,1.5) -- (4,1) -- (4,-1) -- (1,-1.5);
+    
+    % Bolts (black rectangles)
+    \foreach \y in {1,0,-1} {
+        \fill[black] (1,\y*0.5) rectangle +(0.3,0.2);
+    }
+    
+    % Dimension lines and numbers
+    \draw[dash pattern=on 2pt off 2pt] (2.5,0) -- (5,0);
+    \draw (3,0.3) -- (3.4,0);
+    \draw (3,0) -- (3.4,-0.3);
+    \node at (3.7,0.3) {4};
+    \node at (3.4,-0.3) {3};
+    \node at (3,0.6) {5};
+    
+    % Load arrow and text
+    \draw[-{Stealth[scale=2]}] (4,0) -- (5.5,0);
+    \node at (6.5,0) {$P_u = 250$ kN};
+    
+    % Right detail
+    \begin{scope}[xshift=10cm]
+        % I-beam vertical lines
+        \draw (0,2) -- (0,-2);
+        \draw (1,2) -- (1,-2);
+        % Top and bottom closures for I-beam
+        \draw (0,2) -- (1,2);
+        \draw (0,-2) -- (1,-2);
+        % Center dashed line
+        \draw[dash pattern=on 2pt off 2pt] (0.5,2.5) -- (0.5,-2.5);
+        
+        % Connection plate
+        \draw (0.2,1.5) -- (0.8,1.5);
+        \draw (0.2,-1.5) -- (0.8,-1.5);
+        
+        % Bolt pattern
+        \foreach \x in {0.3,0.7} {
+            \foreach \y in {1,0,-1} {
+                \fill ({\x},{\y*0.5}) circle (0.08);
+            }
+        }
+    \end{scope}
+\end{tikzpicture}
