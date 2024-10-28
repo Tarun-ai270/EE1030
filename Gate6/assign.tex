@@ -1,0 +1,118 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+\usepackage{enumitem}
+\usepackage{xcolor}
+%\usepackage{multicol}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\title{2016-MA-53-65}
+\author{AI24BTECH11023 - Tarun Reddy Pakala}
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[start=53]
+\item Let $T:\;l_2\to l_2$ be defined by $$T\brak{\brak{x_1,x_2,\ldots,x_n,\ldots}}=\brak{x_2-x_1,x_3-x_2,\ldots,x_{n+1}-x_n,\ldots}.$$ Then
+\begin{enumerate}
+    \item $\abs{\abs{T}}=1$
+    \item $\abs{\abs{T}}>2$ but bounded 
+    \item $1<\abs{\abs{T}}\leq 2$
+    \item $\abs{\abs{T}}$ is bounded
+\end{enumerate}
+\item Minimize $w=x+2y$ subject to $$2x+y\geq 3$$ $$x+y\geq 2$$ $$x\geq0,\;y\geq0.$$ Then, the minimum value of $w$ is equal to \underline{\hspace{2cm}}  
+
+\item Maximize $w=11x-z$ subject to $$10x+y-z\leq 1$$ $$2x-2y+z\leq 2$$ $$x,y,z\geq 0.$$ Then the maximum value of $w$ is equal to \underline{\hspace{2cm}}
+\item Let $X_1,X_2,X_3,\ldots$ be a sequence of i.i.d. random variables with mean $1$. If $N$ is a geometric random variable with the probability mass function $P\brak{N=k}=\frac{1}{2^k}$; $k=1,2,3,\ldots$ and its independent of the $X_i's$, then $E\brak{X_1+X_2+\ldots+X_N}$ is equal to \underline{\hspace{2cm}}
+\item Let $X_1$ be an exponential random variable with mean $1$ and $X_2$ a gamma random variable with mean $2$ and variance $2$. If $X_1$ and $X_2$ are independently distributed, then $P\brak{X_1<X_2}$ is equal to \underline{\hspace{2cm}}
+\item Let $X_1,X_2,X_3,\ldots$ be a sequence of i.i.d. uniform $\brak{0,1}$ random variables. Then, the value of $$\lim_{n\to \infty}P\brak{-\ln{\brak{1-X_1}}-\ldots-\ln{\brak{1-X_n}}\geq n}$$ is equal to \underline{\hspace{2cm}}
+\item Let $X$ be a standard normal random variable. Then, $P\brak{X<0|\;\abs{\sbrak{X}}=1}$ is equal to
+\begin{enumerate}
+    \item $\frac{\Phi\brak{1}-\frac{1}{2}}{\Phi\brak{2}-\frac{1}{2}}$
+    \item $\frac{\Phi\brak{1}+\frac{1}{2}}{\Phi\brak{2}+\frac{1}{2}}$
+    \item $\frac{\Phi\brak{1}-\frac{1}{2}}{\Phi\brak{2}+\frac{1}{2}}$
+    \item $\frac{\Phi\brak{1}+1}{\Phi\brak{2}+1}$
+\end{enumerate}
+\item Let $X_1,X_2,X_3,\ldots X_n$ be a random sample from the probability density function $$f(x) = 
+\begin{cases} 
+    \theta \alpha e^{-\alpha x}+\brak{1-\theta}2\alpha e^{-2\alpha x}; & \text{if } x \geq 0 \\
+    0 & \text{otherwise,} 
+\end{cases}
+$$
+where $\alpha >0,\; 0\leq \theta \leq 1$ are parameters. Consider the following testing problem:\\
+$H_0:\theta =1,\alpha =1$ versus $H_1:\theta=0,\alpha =2.$
+\begin{enumerate}
+    \item Uniformly Most Powerful test does NOT exist
+    \item Uniformly Most Powerful test is of the form $\sum_{i=1}^n X_i>c$, for some $0<c<\infty$
+    \item Uniformly Most Powerful test is of the form $\sum_{i=1}^n X_i<c$, for some $0<c<\infty$
+    \item Uniformly Most Powerful test is of the form $c_1<\sum_{i=1}^n X_i<c_2$, for some $0<c_1<c_2<\infty$
+\end{enumerate}
+\item Let $X_1,X_2,X_3,\ldots$ be a sequence of i.i.d. $N\brak{\mu,1}$ random variables. Then, $$\lim_{n \to \infty} \frac{\sqrt{\pi}}{2n}\sum_{i=1}^nE\brak{\abs{X_i-\mu}}$$ is equal to \underline{\hspace{2cm}}
+\item Let $X_1,X_2,X_3,\ldots,X_n$ be a random sample from uniform $\sbrak{1,\theta}$, for some $\theta>1$. If $X_{\brak{n}}$=Maximum $\brak{X_1,X_2,X_3,\ldots,X_n}$, then the UMVUE of $\theta$ is
+\begin{enumerate}
+    \item $\frac{n+1}{n}X_{\brak{n}}+\frac{1}{n}$
+    \item $\frac{n+1}{n}X_{\brak{n}}-\frac{1}{n}$
+    \item $\frac{n}{n+1}X_{\brak{n}}+\frac{1}{n}$
+    \item $\frac{n}{n+1}X_{\brak{n}}+\frac{n+1}{n}$
+\end{enumerate}
+\item Let $x_1=x_2=x_3=1,\;x_4=x_5=x_6=2$ be a random sample from a Poisson random variable with mean $\theta$, where $\theta \in \{1,2\}$. Then, the maximum likelihood estimator of $\theta$ is equal to \underline{\hspace{2cm}}
+\item The remainder when $98!$ is divided by $101$ is equal to \underline{\hspace{2cm}}
+\item Let $G$ be a group whose presentation is $$G=\{x,y\;|\;x^5=y^2=e,\:x^2y=yx\}$$ Then $G$ is isomorphic to
+\begin{enumerate}
+    \item $\mathbb{Z}_5$
+    \item $\mathbb{Z}_{10}$
+    \item $\mathbb{Z}_2$
+    \item $\mathbb{Z}_{30}$
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
