@@ -1,0 +1,42 @@
+\begin{figure}[!ht]
+\centering
+\resizebox{3cm}{3cm}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw [ line width=0.7pt ] (1.5,9) rectangle (3.5,3.5);
+\draw [ line width=0.7pt ] (9,9) rectangle (11,3.75);
+\draw [ line width=0.7pt](3.5,8.25) to[european resistor] (9,8.25);
+\draw [ line width=0.7pt](3.5,4.75) to[european resistor] (9,4.75);
+\draw [ line width=0.7pt](3.5,6.5) to[european resistor] (9,6.5);
+\draw [line width=0.7pt, ->, >=Stealth] (4.75,8.5) -- (5.5,8.5);
+\draw [line width=0.7pt, ->, >=Stealth] (4.75,6.75) -- (5.5,6.75);
+\draw [line width=0.5pt, ->, >=Stealth] (4.75,5) -- (4.75,6);
+\draw [line width=0.5pt, ->, >=Stealth] (4.25,5) -- (4.25,7.75);
+\node [font=\normalsize] at (9.75,6.5) {Load};
+\node [font=\normalsize] at (2.25,6.25) {Source};
+\node [font=\normalsize] at (4.25,8) {+};
+\node [font=\normalsize] at (4.75,4.75) {-};
+\node [font=\normalsize] at (4.75,4.75) {-};
+\node [font=\normalsize] at (4.75,5) {-};
+\node [font=\normalsize] at (4.25,5) {-};
+\node [font=\normalsize] at (4.75,6.25) {+};
+\node [font=\small] at (5,5.5) {$v_{bm}$};
+\node [font=\small] at (5,7) {$i_b$};
+\node [font=\small] at (5,8.75) {$i_a$};
+\node [font=\small] at (8,8.5) {a'};
+\node [font=\small] at (8,6.75) {b'};
+\node [font=\small] at (8,5) {n'};
+\node [font=\small] at (3.75,8.5) {a};
+\node [font=\small] at (3.75,6.75) {b};
+\node [font=\Huge] at (3.75,8.5) {.};
+\node [font=\Huge] at (3.75,6.75) {.};
+\node [font=\Huge] at (3.75,5) {.};
+\node [font=\Huge] at (8,5) {.};
+\node [font=\Huge] at (8,6.75) {.};
+\node [font=\Huge] at (8,8.5) {.};
+\node [font=\small] at (3.75,5) {n};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}
