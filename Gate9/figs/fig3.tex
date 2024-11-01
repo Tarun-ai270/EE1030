@@ -1,0 +1,15 @@
+\begin{center}
+\begin{tikzpicture}
+  % Draw the curved path
+  \draw[dashed] (-6,0) .. controls (0, -2) .. (6,0);
+
+  % Draw the airplane
+  \draw[thick] (0,-2) 
+    -- ++(1,0) arc[start angle=0, end angle=180, radius=1cm] -- cycle; % Airplane wings
+  \draw (0,-2) ellipse (1.5cm and 0.3cm); % Elliptical fuselage
+
+  % Label
+  \node at (0,-3) {Airplane};
+
+\end{tikzpicture}
+\end{center}
