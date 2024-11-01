@@ -1,0 +1,144 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage{circuitikz}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+\usepackage{enumitem}
+\usepackage{xcolor}
+%\usepackage{multicol}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\title{2020-AE-27-39}
+\author{AI24BTECH11023 - Tarun Reddy Pakala}
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}
+\item The positive high angle-of-attack condition is obtained in a steady pull-out maneuver at the largest permissible angle-of-attack of the wing. Under this condition, at which of the following regions of the wing does the maximum tension occur?
+%input for figure 1
+\input{fig1.tex}
+\begin{enumerate}
+    \item $I$
+    \item $II$
+    \item $III$
+    \item $IV$
+\end{enumerate}
+\item The natural frequency of the first mode of a rectangular cross section cantilever aluminum beam is $\omega \frac{rad}{s}$. If the material and cross-section remain the same, but the length of the beam is doubled, the first mode frequency will become
+\begin{enumerate}
+    \item $\frac{\omega}{4}\frac{rad}{s}$
+    \item $4\omega \frac{rad}{s}$
+    \item $\frac{\omega}{16} \frac{rad}{s}$
+    \item $16\omega \frac{rad}{s}$
+\end{enumerate}
+\item Given $A=\begin{pmatrix}
+    \sin \theta & \tan \theta \\
+    0 & \cos \theta \\
+\end{pmatrix}$, the sum of squares of eigenvalues of $A$ is
+\begin{enumerate}
+    \item $\tan^2\theta$
+    \item $1$
+    \item $\sin^2\theta$
+    \item $\cos^2\theta$
+\end{enumerate}
+\item Burnout velocity of a space vehicle in a circular orbit at angle $5$ degrees above the local horizon around earth is $13.5\;\frac{km}{s}$. Tangential velocity of the space vehicle in the orbit is \underline{\hspace{2cm}} $\frac{km}{s}$ \brak{round\;off\;to\;two\;decimal\;places}.
+\item Velocity of an airplane in the body fixed axes is given as $\sbrak{100\;-10\;20} \frac{m}{s}$. The sideslip angle is \underline{\hspace{2cm}} degrees \brak{round\;off \;to \;two\; decimal\; places}.
+\item The similarity solution for the diffusion equation,$\frac{\partial u}{\partial t}=\alpha \frac{\partial^2u}{\partial x^2}$ is $u\brak{x,\;t}=u\brak{\eta}$, where similarity variable, $\eta=\frac{x}{\sqrt{\alpha t}}$. If $u\brak{x\;0}=e^{-x^2}$, the ratio $\frac{u\brak{0,\;1}}{u\brak{0\;4}}=$ \underline{\hspace{2cm}} \brak{round \; off \; to\; one \; decimal\;place }.
+\item Air enters the rotor of an axial compressor stage with no pre-whirl \brak{C_\theta=0} and exits the rotor with whirl velocity, $C_\theta=150\frac{m}{s}$. The velocity of rotor vanes, $U$ is $200 \frac{m}{s}$. Assume $C_P=100\frac{J}{kg\;K}$, the stagnation temperature rise across the rotor is \underline{\hspace{2cm}} $K$ \brak{round\;off\;to\;one\;decimal\;place}.
+\item A thin walled beam of constant thickness shown in the figure is subjected to a torque of $3.2\;kNm$. If the shear modulus is $25 GPa$, the angle of twist per unit length is \underline{\hspace{2cm}} $\frac{rad}{m}$ \brak{round\;off\;to\;three\;decimals}.
+%input for figure 2
+\input{fig2.tex}
+\item An airplane of mass $5000\;kg$ is flying at a constant speed of $360\;\frac{km}{h}$ at the bottom of a vertical circle with a radius of $400\;m$, as shown in the figure. Assuming that the acceleration due to gravity is $9.8\;\frac{m}{s^2}$, the load factor experienced at the center of gravity of the airplane is \underline{\hspace{2cm}} \brak{round\;off\;to\;two\;decimal\;places}. 
+%input for figure 3
+\input{fig3.tex}
+\item The equation $x\frac{dx}{dy}+y=c$, where $c$ is a constant, represents a family of
+\begin{enumerate}
+    \item exponential curves 
+    \item parabolas 
+    \item circles
+    \item hyperbolas
+\end{enumerate}
+\item A wedge shaped airfoil is placed in a supersonic flow as shown in figure \brak{\text{not to scale}}. The corners of the wedge are at $x=\text{x}_A$, $x=\text{x}_B$,\;$x=\text{x}_C$, respectively.\\
+%input for figure 4
+\input{fig4.tex}
+Which one of the following represents the correct static pressure along $y=\text{Y}_I$ and $y=\text{Y}_{II}$?
+\begin{enumerate}
+    \item 
+    %input for figure 5
+\input{fig5.tex}
+    \item 
+    %input for figure 6
+\input{fig6.tex}
+    \item 
+    %input for figure 7
+ \input{fig7.tex}
+    \item 
+    %input for figure 8
+\input{fig8.tex}
+\end{enumerate}
+\item The value of Poisson's ratio at which the shear modulus of an isotropic material is equal to the bulk modulus is
+\begin{enumerate}
+    \item $\frac{1}{2}$
+    \item $\frac{1}{4}$
+    \item $\frac{1}{6}$
+    \item $\frac{1}{8}$
+\end{enumerate}
+\item A load P is applied to the free end of a stepped cantilever beam as shown in the figure. The Young's modulus of the material is $E$, and the moments of inertia of the two sections of length $2\;m$ and $1\;m$ are $I$ and $3I$, respectively. Ignoring transverse shear and stress concentration effects, the deflection at the point where the load is applied at the free end of the cantilever is  
+%input for figure 9
+\input{fig9.tex}
+\begin{enumerate}
+    \item $\frac{23}{243EI}$
+    \item $\frac{1}{3EI}$
+    \item $\frac{43}{3EI}$
+    \item $\frac{23}{3EI}$
+\end{enumerate}
+
+
+\end{enumerate}
+\end{document}
