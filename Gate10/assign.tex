@@ -1,0 +1,97 @@
+%iffalse
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,onecolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{pgfplots}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+%\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{float}
+
+\usepackage{enumitem}
+\usepackage{xcolor}
+%\usepackage{multicol}
+
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+
+\title{2020-PH-53-65}
+\author{AI24BTECH11023 - Tarun Reddy Pakala}
+\begin{document}
+\bibliographystyle{IEEEtran}
+
+\maketitle
+\bigskip
+\renewcommand{\thefigure}{\theenumi}
+\renewcommand{\thetable}{\theenumi}
+\begin{enumerate}[start=53]
+\item Let $u^{\mu}$ denote the 4-velocity of a relativistic particle whose square $u^{mu}u_{mu}=1$. If $\epsilon_{\mu v\rho \sigma}$ is the Levi-Civita tensor then the value of $\epsilon_{\mu v\rho \sigma} u^{\mu} u^v u^{\rho} u^{\sigma}$ is \underline{\hspace{2cm}}.
+\item Consider a simple cubic monoatomic Bravais lattice which has a basis with vectors $\overrightarrow{r_1}=0,\overrightarrow{r_2}=\frac{a}{4}\brak{\hat{x}+\hat{y}+\hat{z}}$, $a$ is the lattice parameter. The Bragg reflection is observed due to the change in the wave vector between the incident and the scatterd beami is given by $\overrightarrow{K}=n_1\overrightarrow{G_1}+n_2\overrightarrow{G_2}+n_3\overrightarrow{G_3}$, where $\overrightarrow{G_1}$,$\overrightarrow{G_2}$ and $\overrightarrow{G_3}$ are primitive reciprocal lattice vectors. For $n_1=3,\;n_2=3$ and $n_3=2$, the geometrical structure factor is \underline{\hspace{2cm}}.
+\item A plane electromagnetic wave of wavelength $\lambda$ is incident on a circular loop of conducting wore. The loop radius is $a\brak{a<<\lambda}$. THe angle \brak{\text{in degrees}}, made by the Poynting vector with the normal to the plane of the loop to generate a maximum induced electrical signal, is \underline{\hspace{2cm}}.
+\item An electron in a hydrogen atom is in the state $n=3,\;l=2,\;m=-2$. Let $\hat{L_y}$ denote the $y$-component of the orbital angular momentum operator. If $\brak{\Delta\hat{L_y}}^2=\alpha\hbar^2$, the value of $\alpha$ is \underline{\hspace{2cm}}.
+\item A sinusoidal voltage of the form $v\brak{t}=V_o\cos\brak{\omega t}$ is applied across a parallel plate capacitor placed in vacuum. Ignoring the edge effects, the induced $emf$ within the region between the capacitor plates can be expressed as a power series in $\omega$. The lowest non-vanishing exponent in $\omega$ is \underline{\hspace{2cm}}.
+\item If $\sum_{k=1}^{\infty}a_k\sin\brak{kx}$, for $-\pi \leq x \leq\pi$, the value of $a_2$ is \underline{\hspace{2cm}}.
+\item Let $f_n(x) = 
+\begin{cases} 
+    0, & \text{if } x < -\frac{1}{2n} \\ 
+    n, & \text{if } -\frac{1}{2n} < x < \frac{1}{2n} \\ 
+    0, & \text{if } x > \frac{1}{2n} 
+\end{cases}$\\ The value of $\lim_{n\to \infty}\int_{-\infty}^{\infty}f_n\brak{x}\sin xdx$ is \underline{\hspace{2cm}}.
+
+\item Consider the Hamiltonian $\hat{H}=\hat{H_0}+\hat{H'}$ where\\
+$\hat{H_0}=
+\begin{pmatrix}
+    E & 0 & 0\\
+    0 & E & 0\\
+    0 & 0 & E
+\end{pmatrix}$ and $\hat{H'}$ is the time independent pertubation given by \\
+$\hat{H'}=\begin{pmatrix}
+    0 & k & 0\\
+    k & 0 & k\\
+    0 & k & 0
+\end{pmatrix}$, where $k>0$. If, the maximum energy eigenvalue of $\hat{H}$ is $3\;eV$ corresponding to $E=2\;eV$, the value of $k$ \brak{\text{rounded off to three decimal places}} in $eV$ is \underline{\hspace{2cm}}.
+\item A hydrogen atom is in orbital angular momentum $\left | l,m=l\right\rangle$. If $\overrightarrow{L}$ lies on a cone which makes a half angle 30\degree with respect to $z$-axis, the value of $l$ is \underline{\hspace{2cm}}.
+
+\item In the center of mass frame, two protons having energy $7000\;GeV$, collide to produce protons and anti-protons. The maximum number of anti-protons produced is \underline{\hspace{2cm}}.\\ \brak{\text{Assume the proton mass to be 1 $\frac{GeV}{c^2}$}}
+\item Consider a gas of hydrogen atoms in the atmosphere of the Sun where the temperature is $5800\;K$. If a sample from this atmosphere contains $6.023\times10^{23}$ of hydrogen atoms in the ground state, the number of hydrogen atoms in the first excited state is approximately $8\times 10^n$, where $n$ is an integer. The value of $n$ is \underline{\hspace{2cm}}.\\
+\brak{\text{Boltzmann constant: $8.617\times 10^{-5}$}\frac{eV}{K}}
+\item For a gas of non-interacting particles, the probability that a particle has a speed $v$ in the interval $v$ to $v+dv$ is given by $$f\brak{v}dv=4\pi v^2dv\brak{\frac{m}{2\pi k_BT}}^{\frac{3}{2}}e^{\frac{mv^2}{2k_BT}}$$ If $E$ is the energy of a particle, then the maximum in the corresponding energy distributions in units of $\frac{E}{k_BT}$ occurs at \underline{\hspace{2cm}} \brak{\text{rounded off to one decimal place}}.
+\item The Planck's energy density distribution in given by $u\brak{\omega}=\frac{\hbar \omega^3}{\pi^2 c^3 \brak{e^{\frac{\hbar \omega}{k_BT}-1}}}$. At long wavelengths, the energy density of photons in thermal equilibrium with a cavity at temperature $T$ varies as $T^{\alpha}$, where $\alpha$ is \underline{\hspace{2cm}}.
+\end{enumerate}
+\end{document}
