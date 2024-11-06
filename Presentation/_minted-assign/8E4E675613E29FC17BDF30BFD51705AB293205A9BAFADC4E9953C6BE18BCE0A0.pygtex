@@ -1,0 +1,19 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{matplotlib.pyplot} \PYG{k}{as} \PYG{n+nn}{plt}
+\PYG{k+kn}{from} \PYG{n+nn}{mpl\PYGZus{}toolkits.mplot3d} \PYG{k+kn}{import} \PYG{n}{Axes3D}
+
+\PYG{c+c1}{\PYGZsh{} Read points from the file}
+\PYG{n}{points} \PYG{o}{=} \PYG{p}{[]}
+\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}points.txt\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}r\PYGZdq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{file}\PYG{p}{:}
+    \PYG{k}{for} \PYG{n}{line} \PYG{o+ow}{in} \PYG{n}{file}\PYG{p}{:}
+        \PYG{c+c1}{\PYGZsh{} Remove parentheses and split by commas}
+        \PYG{n}{point} \PYG{o}{=} \PYG{n}{line}\PYG{o}{.}\PYG{n}{strip}\PYG{p}{()[}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{o}{.}\PYG{n}{split}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}, \PYGZdq{}}\PYG{p}{)}
+        \PYG{n}{points}\PYG{o}{.}\PYG{n}{append}\PYG{p}{([}\PYG{n+nb}{float}\PYG{p}{(}\PYG{n}{coord}\PYG{p}{)} \PYG{k}{for} \PYG{n}{coord} \PYG{o+ow}{in} \PYG{n}{point}\PYG{p}{])}
+
+\PYG{c+c1}{\PYGZsh{} Convert points to a numpy array for easier handling}
+\PYG{n}{points} \PYG{o}{=} \PYG{n+nb}{list}\PYG{p}{(}\PYG{n+nb}{zip}\PYG{p}{(}\PYG{o}{*}\PYG{n}{points}\PYG{p}{))}  \PYG{c+c1}{\PYGZsh{} Unzips the list of points}
+
+\PYG{c+c1}{\PYGZsh{} Create a 3D plot}
+\PYG{n}{fig} \PYG{o}{=} \PYG{n}{plt}\PYG{o}{.}\PYG{n}{figure}\PYG{p}{()}
+\PYG{n}{ax} \PYG{o}{=} \PYG{n}{fig}\PYG{o}{.}\PYG{n}{add\PYGZus{}subplot}\PYG{p}{(}\PYG{l+m+mi}{111}\PYG{p}{,} \PYG{n}{projection}\PYG{o}{=}\PYG{l+s+s1}{\PYGZsq{}3d\PYGZsq{}}\PYG{p}{)}
+\end{Verbatim}

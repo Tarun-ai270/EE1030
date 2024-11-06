@@ -1,0 +1,20 @@
+\frametitle{Python Code}
+\begin{minted}[bgcolor=bg, linenos, fontsize=\small, breaklines]{python}
+# Plot the points
+ax.scatter(points[0], points[1], points[2], color='red', s=100)
+
+# Connect the points with a line
+ax.plot(points[0], points[1], points[2], color='blue')
+
+# Annotate the points
+for i, point in enumerate(zip(*points)):
+    ax.text(point[0], point[1], point[2], f'P{i+1} {point}', size=10, zorder=1)
+
+# Set labels
+ax.set_xlabel('X')
+ax.set_ylabel('Y')
+ax.set_zlabel('Z')
+ax.set_title('3D Plot of Points')
+# Show the plot
+plt.show()
+\end{minted}

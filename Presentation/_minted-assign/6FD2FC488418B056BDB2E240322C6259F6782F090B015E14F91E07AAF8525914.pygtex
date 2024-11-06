@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{+w}{    }\PYG{c+cp}{\PYGZsh{}include}\PYG{+w}{ }\PYG{c+cpf}{\PYGZlt{}stdio.h\PYGZgt{}}
+
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{main}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// Define points}
+\PYG{+w}{    }\PYG{k+kt}{double}\PYG{+w}{ }\PYG{n}{points}\PYG{p}{[}\PYG{l+m+mi}{3}\PYG{p}{][}\PYG{l+m+mi}{3}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}\PYG{l+m+mf}{2.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{\PYGZhy{}1.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{3.0}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}\PYG{l+m+mf}{3.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{\PYGZhy{}5.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{1.0}\PYG{p}{\PYGZcb{},}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}\PYG{l+m+mf}{\PYGZhy{}1.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{11.0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mf}{9.0}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{};}
+
+\PYG{+w}{    }\PYG{c+c1}{// Open file for writing}
+\PYG{+w}{    }\PYG{k+kt}{FILE}\PYG{+w}{ }\PYG{o}{*}\PYG{n}{file}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{fopen}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}points.txt\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}w\PYGZdq{}}\PYG{p}{);}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{file}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n+nb}{NULL}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}\PYG{+w}{  }\PYG{c+c1}{// Exit if file cannot be opened}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
