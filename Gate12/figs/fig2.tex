@@ -1,0 +1,61 @@
+\begin{figure}[H]
+\centering
+\resizebox{3cm}{3cm}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw  (7,13) rectangle (12,10.5);
+\draw [short] (7,13) -- (8,14);
+\draw [short] (8,14) -- (12.5,14);
+\draw [short] (12,13) -- (12.5,14);
+\draw [short] (12.5,14) -- (12.5,11.5);
+\draw [short] (12,10.5) -- (12.5,11.5);
+\draw [dashed] (7,10.5) -- (8,11.75);
+\draw [dashed] (8,14) -- (8,11.75);
+\draw [dashed] (8,11.75) -- (11,11.75);
+\draw [dashed] (12.5,11.75) -- (11,11.75);
+\draw [->, >=Stealth] (6.25,12.75) -- (7.25,12.25);
+\draw [->, >=Stealth] (13.25,13) -- (12.25,12.25);
+\draw [->, >=Stealth] (3.5,7.75) -- (3.5,10.75);
+\draw [->, >=Stealth] (3.5,7.75) -- (1.75,5.75);
+\draw [->, >=Stealth] (3.5,7.75) -- (6.75,6);
+\node [font=\Huge] at (3,9) {.};
+\node [font=\Huge] at (2.5,8.5) {.};
+\node [font=\Huge] at (2.25,7.5) {.};
+\node [font=\Huge] at (2.75,7.5) {.};
+\node [font=\Huge] at (5.5,8.75) {.};
+\node [font=\Huge] at (5,8) {.};
+\node [font=\Huge] at (6,7.5) {.};
+\node [font=\Huge] at (4.5,6.5) {.};
+\draw  (5.75,4.75) rectangle  node {\small Not to scale} (8,4.25);
+\node [font=\small] at (4.75,6.25) {Q1};
+\node [font=\small] at (6.25,7.25) {Q2};
+\node [font=\small] at (5.75,8.75) {Q3};
+\node [font=\small] at (4.75,8) {Q4};
+\node [font=\small] at (2,7.25) {P1};
+\node [font=\small] at (3,7.5) {P4};
+\node [font=\small] at (3,9) {P3};
+\node [font=\small] at (2.25,8.5) {P2};
+\node [font=\small] at (6,13.25) {Datum};
+\node [font=\small] at (6,13) {Surface SP};
+\node [font=\small] at (13.25,13.5) {Surface SQ};
+\node [font=\small] at (6.5,8.25) {Points from };
+\node [font=\small] at (6.5,8) {Surface SQ};
+\node [font=\small] at (10,8.75) {Q1 : (4,6,3)};
+\node [font=\small] at (10,8.25) {Q2 : (1,6,3)};
+\node [font=\small] at (10,7.75) {Q3 : (1.5,4,7)};
+\node [font=\small] at (10,7.25) {Q4 : (4,4,6)};
+\node [font=\small] at (8.5,6) {(all cordinates are in mm))};
+\node [font=\small] at (3.5,11) {z};
+\node [font=\small] at (1.5,5.75) {x};
+\node [font=\small] at (6.5,6.5) {y};
+\node [font=\small] at (1.25,8.75) {Points from};
+\node [font=\small] at (1.25,8.25) {Datum surface SP};
+\node [font=\small] at (1.5,10.75) {P1 : (4,0,3) };
+\node [font=\small] at (1.5,10.25) {P2 : (3,0,6)};
+\node [font=\small] at (1.5,9.75) {P3 : (1.5,0,7)};
+\node [font=\small] at (1.5,9.25) {P4 : (2,0,2)};
+\end{circuitikz}
+}%
+
+\label{fig:my_label}
+\end{figure}

@@ -1,0 +1,13 @@
+\begin{center}
+\begin{tikzpicture}
+\draw[pattern=north west lines] (-3,-0.5) rectangle (3,0);
+\draw[thick] (-3,0) -- (3,0);
+\draw[thick] (-2.5,0) arc (180:0:2.5);
+\node at (-1.5,2) {$\rho$};
+\coordinate (burst) at (0,0.5);
+\foreach \angle in {0,45,...,315}
+{   \draw[thick] (burst) -- ++(\angle:0.3);}
+\draw[->, thick] (burst) -- (2,2) node[midway, above right] {$R$};
+\end{tikzpicture}
+\end{center}
+\end{enumerate}
