@@ -1,0 +1,210 @@
+\documentclass[a4paper,12pt]{report}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{array} % Added to handle line breaks in the table
+
+% Set page margins
+\geometry{top=1in,bottom=1in,left=1in,right=1in}
+
+% Color setup
+\usepackage{tcolorbox}
+\definecolor{myblue}{rgb}{0.1, 0.2, 0.6}
+\definecolor{mygreen}{rgb}{0.1, 0.6, 0.2}
+
+% Header setup
+\pagestyle{fancy}
+\fancyhead[L]{Eigenvalue Computation using QR Algorithm}
+\fancyhead[R]{Tarun Reddy}
+% Title page setup
+\title{\vspace{-2cm} \textbf{\huge Eigenvalue Computation Using the QR Algorithm} \\[1cm] \large Tarun Reddy}
+\author{}
+\date{}
+
+\begin{document}
+
+% Title page
+\maketitle
+\newpage
+
+\section*{\textcolor{myblue}{Introduction}}
+Eigenvalue computation is a fundamental problem in linear algebra and is widely used in various fields such as physics, engineering, and computer science. The eigenvalues of a matrix are scalars that provide useful insight in many areas such as Quantum Physics (Shrodinger's Wave Equation), and much more. In this report, we will focus on the QR algorithm, a well-known numerical method for computing the eigenvalues of a square matrix.
+
+\section*{\textcolor{myblue}{What is an Eigenvalue?}}
+In linear algebra, an eigenvalue \( \lambda \) of a square matrix \( A \) is a scalar for which there exists a nonzero vector \( \overrightarrow{v} \) (called an eigenvector) such that:
+
+\[
+A \overrightarrow{v} = \lambda \overrightarrow{v}
+\]
+
+This equation means that applying the matrix \( A \) to the eigenvector \( \mathbf{v} \) only scales it by the scalar \( \lambda \) without changing its direction. Eigenvalues have many applications, including solving systems of linear equations, analyzing dynamical systems, and performing dimensionality reduction techniques in machine learning. For a given \(n\times n\) square matrix, there exist at-most \(n\) eigenvalues for which, each has a unique direction vector known as eigenvector.
+
+\section*{\textcolor{myblue}{Chosen Algorithm: QR Algorithm}}
+The QR algorithm is an iterative method for finding the eigenvalues of a matrix. The idea is to perform a sequence of QR factorizations of the matrix and update it at each iteration. In each step, a matrix \( A \) is decomposed into an orthogonal matrix \( Q \) and an upper triangular matrix \( R \):
+
+\[
+A = QR
+\]
+
+Then, the matrix \( A \) is updated as:
+
+\[
+A_{\text{new}} = RQ
+\]
+
+This process is repeated iteratively, and as the iterations progress, the matrix converges to a diagonal matrix whose diagonal elements are the eigenvalues of the original matrix. The eigenvalues can then be read off the diagonal of the resulting matrix after convergence.
+
+\section*{\textcolor{myblue}{Example of QR Algorithm Calculation}}
+Consider the matrix:
+\[
+A = \begin{bmatrix}
+6 & 2 \\
+2 & 3
+\end{bmatrix}.
+\]
+
+1. Perform QR decomposition:
+   \[
+   A = QR, \quad Q = \begin{bmatrix}
+   0.9487 & -0.3162 \\
+   0.3162 & 0.9487
+   \end{bmatrix}, \quad R = \begin{bmatrix}
+   6.3246 & 3.1623 \\
+   0 & 2.5298
+   \end{bmatrix}.
+   \]
+
+2. Update \( A \):
+   \[
+   A_{\text{new}} = RQ = \begin{bmatrix}
+   6.8 & 1.6 \\
+   1.6 & 2.2
+   \end{bmatrix}.
+   \]
+
+3. Repeat the process:
+   After a few iterations, \( A \) converges to:
+   \[
+   \begin{bmatrix}
+   7 & 0 \\
+   0 & 2
+   \end{bmatrix},
+   \]
+   where the eigenvalues are \( \lambda_1 = 7 \) and \( \lambda_2 = 2 \).
+   
+\section*{\textcolor{myblue}{Time Complexity Analysis}}
+The time complexity of the QR algorithm depends on the QR decomposition, which takes \( O(n^3) \) for a matrix of size \( n \times n \). The number of iterations \( k \) required for convergence varies depending on the matrix, but for well-conditioned matrices, it is often a constant.
+
+Thus, the total time complexity of the QR algorithm is:
+
+\[
+O(n^3 \cdot k)
+\]
+
+For most matrices, \( k \) is relatively small, so the method is feasible for matrices up to moderate size. However, for extremely large matrices or those with ill-conditioned eigenvalues, the number of iterations could increase, making the algorithm computationally expensive.
+
+\section*{\textcolor{myblue}{Other Insights}}
+
+\subsection*{\textcolor{mygreen}{Memory Usage}}
+The QR algorithm requires \( O(n^2) \) memory for storing the matrix \( A \), and additional memory for storing the matrices \( Q \) and \( R \) during the decomposition. For large matrices, the memory requirements could become significant. 
+
+\subsection*{\textcolor{mygreen}{Convergence Rate}}
+The QR algorithm is generally fast and converges quickly for well-conditioned matrices. The convergence is usually linear or superlinear, but the rate of convergence can be slower for matrices with eigenvalues that are close to each other or for poorly conditioned matrices.
+
+\subsection*{\textcolor{mygreen}{Suitability for Different Types of Matrices}}
+The QR algorithm is suitable for dense matrices and works well for non-symmetric matrices. However, for symmetric matrices, specialized methods such as the \textit{Divide and Conquer} algorithm can be more efficient. For sparse matrices, where most of the elements are zero, the QR algorithm is inefficient, and methods like the Arnoldi iteration or Lanczos method are preferred.
+
+% Corrected first table
+\begin{table}[H]
+\centering
+\begin{tabular}{|p{3cm}|p{9cm}|}
+\hline
+\textbf{Aspect}              & \textbf{Description}                                                                                  \\ \hline
+\textbf{Memory Usage}         & \( O(n^2) \) for storing the matrix \( A \), plus additional storage for \( Q \) and \( R \).        \\ \hline
+\textbf{Convergence Rate}     & Generally linear or superlinear; may be slower for matrices with close eigenvalues or poor conditioning. \\ \hline
+\textbf{Suitability for Dense Matrices} & Very suitable, works efficiently for general dense matrices.                                      \\ \hline
+\textbf{Suitability for Sparse Matrices} & Less efficient, alternative methods like Arnoldi or Lanczos are preferred for sparse matrices.    \\ \hline
+\textbf{Suitability for Symmetric Matrices} & Can be slower than specialized methods like Divide and Conquer for symmetric matrices.            \\ \hline
+\textbf{Suitability for Non-Symmetric Matrices} & Suitable for non-symmetric matrices with a broad range of eigenvalue distributions.             \\ \hline
+\textbf{Computational Complexity} & \( O(n^3 \cdot k) \), where \( k \) is the number of iterations, typically small for well-conditioned matrices. \\ \hline
+\end{tabular}
+\caption{Summary of Key Aspects of the QR Algorithm}
+\end{table}
+
+\section*{\textcolor{myblue}{Comparison of Algorithms}}
+
+Several algorithms exist for eigenvalue computation. While each algorithm has its own strengths and weaknesses, the QR algorithm remains widely used due to its reliability and applicability to general dense matrices. For specialized matrices, like symmetric or sparse matrices, other algorithms may be more efficient.
+
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.5} % Adjust row height
+\setlength{\tabcolsep}{8pt} % Adjust column spacing
+\begin{tabular}{|p{3cm}|p{4cm}|p{4cm}|p{4cm}|}
+\hline
+\textbf{Aspect} & \textbf{QR Algorithm} & \textbf{Power Method} & \textbf{Jacobi Method} \\ \hline
+\textbf{Matrix Type} 
+& Suitable for dense matrices, symmetric or non-symmetric 
+& Works best for large, sparse matrices 
+& Limited to symmetric matrices \\ \hline
+
+\textbf{Convergence Rate} 
+& Linear to superlinear 
+& Slow, especially for closely spaced eigenvalues 
+& Quadratic for well-conditioned matrices \\ \hline
+
+\textbf{Eigenvalues Computed} 
+& All eigenvalues 
+& Dominant eigenvalue only 
+& All eigenvalues \\ \hline
+
+\textbf{Computational Complexity} 
+& \(O(n^3 \cdot k)\), with moderate \(k\) 
+& \(O(n^2 \cdot k)\), with large \(k\) 
+& \(O(n^3)\), efficient for small \(n\) \\ \hline
+
+\textbf{Memory Usage} 
+& \(O(n^2)\) 
+& \(O(n)\) 
+& \(O(n^2)\) \\ \hline
+
+\textbf{Suitability for Sparse Matrices} 
+& Inefficient 
+& Highly suitable 
+& Inefficient \\ \hline
+
+\textbf{Suitability for Large Matrices} 
+& Moderate efficiency 
+& Very suitable 
+& Inefficient \\ \hline
+
+\textbf{Advantages} 
+& Handles complex and real eigenvalues effectively 
+& Simple and scalable 
+& High precision for symmetric matrices \\ \hline
+
+\textbf{Limitations} 
+& Computationally expensive for large matrices 
+& Computes only the dominant eigenvalue 
+& Limited to symmetric matrices \\ \hline
+\end{tabular}
+\caption{Comparison of Eigenvalue Computation Algorithms}
+\label{tab:algorithm_comparison}
+\end{table}
+
+
+\section*{\textcolor{myblue}{Conclusion}}
+
+The QR algorithm is a powerful and versatile method for computing eigenvalues. It is particularly effective for general dense matrices and can handle both real and complex eigenvalues. However, for sparse or symmetric matrices, other algorithms may be more suitable. While the QR algorithm has a higher computational complexity, it remains one of the most widely used methods for eigenvalue computation due to its simplicity, reliability, and robustness across a wide range of matrices.
+
+\end{document}
+
+
